@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.get("/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "./public/notes.html"));
+    res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
 
 
@@ -65,7 +65,7 @@ app.post("/api/notes", function (req, res) {
 });
 
 app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "./public/index.html"));
+    res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
 
